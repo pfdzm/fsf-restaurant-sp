@@ -37,11 +37,10 @@ app.post("/api/tables", function(req, res) {
 
     if (tables.length < 5) {
       tables.push(newReservation);
-      res.send("Added to tables!");
     } else {
       waitList.push(newReservation);
-      res.send("Added to waitlist!");
     }
+    res.json(tables);
   } catch (error) {
     console.log(error);
     return res.json(error);
