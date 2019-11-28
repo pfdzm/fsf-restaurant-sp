@@ -27,7 +27,7 @@ app.get("/api/waitlist", (req, res) => res.json(waitList));
 app.post("/api/tables", function(req, res) {
   try {
     console.log(req.body);
-    var newReservation = req.body || {};
+    const newReservation = req.body || {};
 
     // Using a RegEx Pattern to remove spaces from newCharacter
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
